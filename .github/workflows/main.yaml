@@ -1,17 +1,17 @@
 name: Python CI Workflow
+
 on: [push]
-jobs:
-  run-python:
-   runs-on: ubuntu-latest
-  
-  steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with: 
-        python-version: '3.12'
+jobs: run-python: runs-on: ubuntu-latest
 
-    - name: Run python script
-      run: python program.py
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v4
+
+  - name: Set up Python
+    uses: actions/setup-python@v5
+    with:
+      python-version: '3.12'
+
+  - name: Run python script
+    run: python program.py
